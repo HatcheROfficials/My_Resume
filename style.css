@@ -3,7 +3,7 @@ body {
     width: 100vw;
     height: 100vh;
 
-    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: var(--d_textFontSize);
 
     display: grid;
@@ -15,10 +15,10 @@ body {
 
 /* reference border */
 body * {
-    border: 1px solid black none;
+    border: 1px solid white none;
 }
 
-:root{
+:root {
     --baseCol: #1e2129;
     --secBaseCol: #13151a;
     --highlightCol: #00acc1;
@@ -26,100 +26,118 @@ body * {
     --whiteCol: white;
 
     --d_h1FontSize: calc(0.8rem + 1vw);
-    --d_h2FontSize: calc(0.3rem + 1vw);
-    --d_textFontSize: calc(0.2rem + 1vw);
+    --d_h2FontSize: calc(0.5rem + 1vw);
+    --d_textFontSize: calc(0.3rem + 1vw);
 
     --m_h1FontSize: calc(0.8rem + 1vw);
-    --m_h2FontSize: calc(0.8rem + 1vw);
+    --m_h2FontSize: calc(.8rem + 1vw);
     --m_textFontSize: calc(0.7rem + 1vw);
 }
 
 /* HEADER - START*/
-header{
+header {
     box-shadow: 0px 0.5px 0.5px 0.5px var(--secBaseCol);
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
-#author{
-    float: left;
-    margin: 2vh calc(1rem + 1vw) 2vh calc(1rem + 1vw);
-    padding: 1vh 1vw;
+
+#author {
+    margin: 0 2vw 0 2vw;
+    padding: 0.5vh calc(0.4rem + 0.5vw);
+
     background-color: var(--highlightCol);
     color: var(--whiteCol);
     font-size: var(--d_h1FontSize);
     font-weight: bold;
+
     border-radius: 0.2rem;
 }
-.topNav{
+
+.topNav {
     list-style: none;
 }
 
-.topNav li{
+.topNav li {
     float: left;
-    margin: 2vh 1vw;
-    padding: 1vh 1vw;
-    text-align: center;
+    display: block;
+
     font-size: var(--d_h2FontSize);
+    color: var(--textCol);
+
+    padding: 0.5vh calc(0.5rem + 1vw);
 }
-.topNav li:hover{
+
+.topNav li:hover {
     background-color: var(--secBaseCol);
     color: var(--highlightCol);
     border-radius: 0.2rem;
 }
-.topNav .active{
+.topNav li.active{
     background-color: var(--secBaseCol);
     color: var(--highlightCol);
     border-radius: 0.2rem;
 }
-.topNav .hamburger{
+
+.topNav .hamburger {
     display: none;
 }
 
 @media screen and (max-width: 600px) {
-    body{
+    body {
         font-size: var(--m_textFontSize);
     }
-    header{
-        display: block;
+
+    #navMenuContainer {
+        position: relative;
     }
-    #author{
-        margin-bottom: 0;
-        display: block;
-        float: none;
-        text-align: center;
-        font-size: var(--m_h1FontSize);
+
+    .topNav {
+        position: absolute;
+        transform: translate(-100%, -50%);
+
+        width: 50vw;
     }
-    .topNav li{
+
+    .topNav li {
         font-size: var(--m_h2FontSize);
     }
-    .topNav li:not(.active){
+
+    .topNav li:not(.active) {
         display: none;
     }
-    .topNav li.hamburger{
+
+    .topNav li.hamburger {
         display: block;
         float: right;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .topNav{
-        position: relative;
+    .topNav.responsiveNavMenu {
+        transform: translate(-100%, -10%);
+        background-color: var(--baseCol);
+        border-bottom: 5px solid var(--highlightCol);
     }
-   .topNav.responsiveNavMenu li{
+    .topNav.responsiveNavMenu li {
         display: block;
         float: none;
-        text-align: left;
+        padding: 1rem 1rem;
     }
     .topNav.responsiveNavMenu li.hamburger{
-        margin-top: 0;
         position: absolute;
-        right: 0;
         top: 0;
+        right: 0;
     }
 }
+
 /* HEADER - END */
 
 /* CONTENT */
+#content {
+    overflow: hidden;
+}
+
 #content>article {
     display: none;
 }
@@ -135,7 +153,7 @@ footer>div {
     height: 50%;
     aspect-ratio: 1/1;
 
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 50%;
     margin: 0 1vw;
 
