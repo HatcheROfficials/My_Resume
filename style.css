@@ -17,7 +17,7 @@ body {
 
 /* reference border */
 body * {
-    border: 1px solid white none;
+    border: 1px solid white;
 }
 
 :root {
@@ -246,6 +246,14 @@ header {
 #expAchieve{
     padding: 1rem;
     grid-area: 2/1/3/3;
+}
+
+/* MY WORK */
+#work{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
 }
 /* FOOTER */
 footer {
