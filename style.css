@@ -265,6 +265,9 @@ header {
     padding: 0.5rem;
     margin-right: 0.5rem;
 }
+#work>div>:last-child{
+    margin-right: 0.5rem;
+}
 #work>div>:first-child a{
     width: 80%;
     transition: all 0.2s ease-in-out;
@@ -284,6 +287,15 @@ header {
 #work>div:nth-child(1), #work>div:nth-child(3) {
     border-right: 0.5px solid var(--textCol);
 }
+
+/* REACH ME */
+#reachMe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* FOOTER */
 footer {
     display: flex;
@@ -294,6 +306,7 @@ footer {
 }
 
 footer>div {
+    color: var(--whiteCol);
     height: 50%;
     aspect-ratio: 1/1;
 
@@ -306,7 +319,10 @@ footer>div {
     justify-content: center;
     align-items: center;
 }
-
+footer a{
+    color: var(--whiteCol);
+    text-decoration: none;
+}
 .socialIcon{  
     height: 100%;
     aspect-ratio: 1/1;
