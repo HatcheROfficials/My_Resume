@@ -288,6 +288,29 @@ header {
     border-right: 0.5px solid var(--textCol);
 }
 
+/* INTEREST */
+#interest{
+    display: flex;
+    flex-direction: column;
+}
+#interest>div:first-child{
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+#interest>div:last-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#interest>div:last-child>div:last-child{
+    text-align: justify;
+    width: 50%;
+}
 /* REACH ME */
 #reachMe{
     display: flex;

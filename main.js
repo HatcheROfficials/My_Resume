@@ -49,5 +49,5 @@ function displayActiveArticle(activeDataId){
 }
 
 // Display a default content onload
-window.addEventListener("load",displayActiveArticle(5));
+window.addEventListener("load",displayActiveArticle(1));
 
