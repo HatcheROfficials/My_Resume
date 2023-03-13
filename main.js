@@ -17,7 +17,7 @@ function navMenuItemSelect(event){
     var navMenuList = document.querySelectorAll(".topNav li");
 
     for(var i=0; i<navMenuList.length; i++){
-        if(navMenuList[i].classList.contains("active")){
+        if(navMenuList[i].classList.contains("active")){ 
             var currentActive = navMenuList[i];
         }
     }
@@ -49,5 +49,5 @@ function displayActiveArticle(activeDataId){
 }
 
 // Display a default content onload
-window.addEventListener("load",displayActiveArticle(1));
+window.addEventListener("load",displayActiveArticle(3));
 

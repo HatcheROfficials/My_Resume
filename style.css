@@ -12,7 +12,7 @@ body {
     background-color: var(--baseCol);
     color: var(--textCol);
 
-    user-select: none;
+    /* user-select: none; */
 }
 
 /* reference border */
@@ -141,6 +141,7 @@ header {
 
 #content {
     overflow: hidden;
+    /* scroll-behavior: ; */
 }
 /* ABOUT ME SECTION */
 #aboutme{
@@ -257,35 +258,6 @@ header {
 #work>div{
     display: grid;
     grid-template-columns: 2fr 3fr;
-}
-#work>div>:first-child{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem;
-    margin-right: 0.5rem;
-}
-#work>div>:last-child{
-    margin-right: 0.5rem;
-}
-#work>div>:first-child a{
-    width: 80%;
-    transition: all 0.2s ease-in-out;
-}
-#work>div>:first-child a:hover{
-    width: 100%;
-}
-#work>div>:first-child img{
-    border-radius: 1rem;
-}
-.removeTopPadding{
-    padding-top: 0;
-}
-#work>div:nth-child(1), #work>div:nth-child(2) {
-    border-bottom: 0.5px solid var(--textCol);
-}
-#work>div:nth-child(1), #work>div:nth-child(3) {
-    border-right: 0.5px solid var(--textCol);
 }
 
 /* INTEREST */
