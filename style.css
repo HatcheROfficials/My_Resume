@@ -140,8 +140,11 @@ header {
 /* CONTENT */
 
 #content {
-    overflow: hidden;
+    overflow: scroll;
     /* scroll-behavior: ; */
+}
+#content::-webkit-scrollbar{
+    display: none;
 }
 /* ABOUT ME SECTION */
 #aboutme{
@@ -251,13 +254,32 @@ header {
 
 /* MY WORK */
 #work{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    /* height: 100%; */
 }
 #work>div{
-    display: grid;
-    grid-template-columns: 2fr 3fr;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+#work>div>div{
+    /* border: 2px solid red; */
+    width: 90%;
+}
+#work>div>div:first-child{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#work>div>div:first-child img{
+    width: 90%;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+#work>div>div:first-child img:hover{
+    width: 100%;
 }
 
 /* INTEREST */
